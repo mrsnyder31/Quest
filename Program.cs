@@ -9,6 +9,7 @@ namespace Quest
     {
         static void Main(string[] args)
         {
+            // FreshMeat:
             // Create a few challenges for our Adventurer's quest
             // The "Challenge" Constructor takes three arguments
             //   the text of the challenge
@@ -79,6 +80,30 @@ namespace Quest
             {
                 Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
             }
+
+            Console.WriteLine("Would you like to go on another quest? Yes/No");
+            string Return = Console.ReadLine().ToLower();
+
+            while (Return == "yes")
+            {
+                // goto FreshMeat;
+                if (theAdventurer.Awesomeness <= 50)
+                { theAdventurer.Awesomeness = 50; }
+
+                foreach (Challenge challenge in challenges)
+                {
+                    challenge.RunChallenge(theAdventurer);
+                }
+
+                Console.WriteLine("Would you like to go on another quest? Yes/No");
+                Return = Console.ReadLine().ToLower();
+            }
+
+            if (Return != "yes")
+            {
+                Console.WriteLine("Farewell adventurer.");
+            }
+
         }
     }
 }
