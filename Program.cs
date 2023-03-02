@@ -49,10 +49,15 @@ namespace Quest
                 Length = 80
             };
 
+            Hat NewHat = new Hat
+            {
+                ShininessLevel = 5
+            };
+
             // Make a new "Adventurer" object using the "Adventurer" class
             Console.WriteLine("What's your name adventurer?");
             string AName = Console.ReadLine();
-            Adventurer theAdventurer = new Adventurer(AName, NewRobe);
+            Adventurer theAdventurer = new Adventurer(AName, NewRobe, NewHat);
 
             theAdventurer.getDescription();
 
