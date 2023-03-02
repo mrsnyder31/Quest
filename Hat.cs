@@ -21,9 +21,13 @@ namespace Quest
                 {
                     return "bright";
                 }
-                else
+                else if (ShininessLevel >= 9)
                 {
                     return "blinding";
+                }
+                else
+                {
+                    return "invisible";
                 }
             }
 

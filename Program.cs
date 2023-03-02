@@ -61,6 +61,8 @@ namespace Quest
 
             theAdventurer.getDescription();
 
+            // Prize game_prize = new Prize("A magical jewel");
+
 
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
@@ -94,6 +96,7 @@ namespace Quest
                 Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
             }
 
+            // game_prize.ShowPrize(theAdventurer);
             Console.WriteLine("Would you like to go on another quest? Yes/No");
             string Return = Console.ReadLine().ToLower();
 
