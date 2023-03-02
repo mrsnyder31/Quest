@@ -43,10 +43,18 @@ namespace Quest
             int minAwesomeness = 0;
             int maxAwesomeness = 100;
 
+            Robe NewRobe = new Robe
+            {
+                Colors = new List<string> { "blue", "green", "silver", "gold" },
+                Length = 80
+            };
+
             // Make a new "Adventurer" object using the "Adventurer" class
             Console.WriteLine("What's your name adventurer?");
             string AName = Console.ReadLine();
-            Adventurer theAdventurer = new Adventurer(AName);
+            Adventurer theAdventurer = new Adventurer(AName, NewRobe);
+
+            theAdventurer.getDescription();
 
 
             // A list of challenges for the Adventurer to complete
